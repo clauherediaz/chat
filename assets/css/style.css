@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", system-ui;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+}
+
+.container {
+    position: relative;
+    width: 1400px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: row;
+}
+
+.container .leftSide {
+    position: relative;
+    flex: 30%;
+    background: #fff;
+    border-right: 1px solid rgba(80, 80, 80, 0.6);
+}
+
+.container .rightSide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 70%;
+    background: #e5ddd5;
+}
+
+.container .rightSide::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/fondo-chat.png);
+    opacity: 0.5;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #ededee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgText {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    max-width: 70px;
+    min-width: 40px;
+}
+
+.name .time {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icons li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #858585;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.chat-contact__item {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-contact__img {
+    max-width: 80px;
+    min-width: 40px;
+}
+
+.chat-contact__img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.chat-contact__data {
+    position: relative;
+    width: 100%;
+}
+
+.chat-contact__data .name {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.chat-contact__data .last-message {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.last-message p {
+    color: #aaa;
+}
+
+.message {
+    overflow-y: auto;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    width: 100%;
+    /*new code */
+    width: 100%;
+}
+
+.message p {
+    display: flex;
+    position: relative;
+    right: 0;
+    max-width: 95%;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.sender {
+    justify-content: flex-end;
+    background-color: #d7f8ba;
+}
+
+.receiver {
+    justify-content: flex-start;
+    background-color: #ffffff;
+}
+
+.receiver p {
+    background: #fff;
+}
+
+.chatBox_input {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: #ededee;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatBox_input ion-icon {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #858585;
+}
+
+.chatBox_input input {
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    position: relative;
+    bottom: 0;
+    width: 90%;
+    height: 40px;
+}
+
+
+/*Aqui DROP DOWN */
+
+.attachment-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    left: 0;
+    width: 100px;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+/* versión mobile */
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .conversation-list {
+        display: none;
+        width: 100%;
+        position: static;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .current-conversation {
+        margin-left: 0;
+    }
+    .dropdown-content {
+        display: block;
+        position: static;
+        width: auto;
+        border: none;
+    }
+}
