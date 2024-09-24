@@ -143,21 +143,47 @@ body {
     color: #aaa;
 }
 
+
+/*
 .message {
     overflow-y: auto;
     padding: 10px;
     margin: 5px 0;
     border-radius: 15px;
     width: 100%;
-    /*new code */
+  new code 
     width: 100%;
+} */
+
+.chatBox {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 130px);
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.contentMessage__left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contentMessage__right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message {
+    position: relative;
+    display: flex;
+    margin: 5px 0;
 }
 
 .message p {
-    display: flex;
     position: relative;
     right: 0;
-    max-width: 95%;
+    text-align: right;
+    max-width: 5%;
     padding: 10px;
     border-radius: 12px;
     font-size: 1rem;
@@ -254,7 +280,7 @@ body {
         margin-left: 0;
     }
     .dropdown-content {
-        display: block;
+        display: none;
         position: static;
         width: auto;
         border: none;
