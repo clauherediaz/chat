@@ -140,10 +140,13 @@
                 <div class="imgText">
 
                     <div class="profile">
-                        <img src="assets/img/avatar1.png" alt="Profile" class="profile-img">
-
+                        <img src="assets/img/avatar1.png" alt="Profile">
                     </div>
-                    <h4>Alejandro Bonilla</h4>
+
+                    <div class="name">
+                        <h4>Alejandro Bonilla</h4>
+                    </div>
+
                 </div>
                 <ul class="icons">
                     <li>
@@ -204,7 +207,7 @@
                 </div>
 
                 <div class="contentMessage__right">
-                    <p class="message sender">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis praesentium fuga, modi aperiam veritatis repudiandae. Architecto tempora aspernatur adipisci debitis eligendi.</p>
+                    <p class="message sender">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis praesentium fuga, modi aperiam veritatis repudiandae.</p>
                 </div>
 
                 <div class="contentMessage__left">
@@ -220,32 +223,26 @@
                 </div>
 
                 <div class="contentMessage__right">
-                    <p class="message sender">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis praesentium fuga, modi aperiam veritatis repudiandae. Architecto tempora aspernatur adipisci debitis eligendi.</p>
+                    <p class="message sender">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-
-
-
-
 
             </div>
-            <!-- chatBox input
-                            <div class="chatBox_input">
-                                <ion-icon name="attach-outline"></ion-icon>
-                                <input type="text" placeholder="Mensaje">
-                                <ion-icon name="mic-outline"></ion-icon>
-                            </div>
-                            -->
-            <!-- Dropdown -->
+
 
             <div class="chatBox_input">
+
+
+
                 <div class="attachment-dropdown">
-                    <ion-icon class="dropdown-toggle" name="attach-outline"></ion-icon>
-                    <div class="dropdown-content">
-                        <a href="#">Imagen</a>
-                        <a href="#">Video</a>
-                        <a href="#">Documentos</a>
+                    <ion-icon id=btnShow class="dropdown-toggle" name="attach-outline"></ion-icon>
+                    <div id="contentShow" class="dropdown-content">
+                        <a class="content" href="#">Imagen</a>
+                        <a class="content" href="#">Video</a>
+                        <a class="content" href="#">Documentos</a>
                     </div>
                 </div>
+
+
                 <input type="text" placeholder="Mensaje">
                 <ion-icon name="mic-outline"></ion-icon>
 
